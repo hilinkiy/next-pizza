@@ -2,6 +2,7 @@ import React from "react";
 import {cn} from '@/lib/utils'
 import {FilterCheckbox, RangeSlider, Title} from "@/components/shared/index";
 import {Input} from "@/components/ui/index";
+import {CheckboxFilterGroup} from "@/components/shared/checkbox-filters-group";
 
 interface IProps {
     className?: string
@@ -25,6 +26,47 @@ export const Filters: React.FC<IProps> = ({className}) => {
                 </div>
                 <RangeSlider min={0} max={5000} step={10} value={[0, 5000]} />
             </div>
+            <CheckboxFilterGroup title={"Ингредиенты"}
+                                 items={}
+                                 className={"mt-5"}
+                                 limit={5}
+                                 defaultItems={[
+                                     {
+                                         text: "fafas",
+                                         value: '1',
+                                     },
+                                     {
+                                         text: "fafasfasfas",
+                                         value: '2',
+                                     },
+                                     {
+                                         text: "fafahffhfdhds",
+                                         value: '3',
+                                     },
+                                     {
+                                         text: "fafa674tewerfs",
+                                         value: '4',
+                                     },
+                                 ]}
+                                 items={[
+                                     {
+                                         text: "fafas",
+                                         value: '1',
+                                     },
+                                     {
+                                         text: "fafasfasfas",
+                                         value: '2',
+                                     },
+                                     {
+                                         text: "fafahffhfdhds",
+                                         value: '3',
+                                     },
+                                     {
+                                         text: "fafa674tewerfs",
+                                         value: '4',
+                                     },
+                                 ]}
+            />
         </div>
     )
 }
